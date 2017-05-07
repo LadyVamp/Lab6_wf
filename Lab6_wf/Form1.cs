@@ -49,6 +49,34 @@ namespace Lab6_wf
             sp.action = cmbAction.Text;
             CacheStatus sc = sp.Save();
             MessageBox.Show("Объект " + sp.regexp + " успешно создан!");
+            textStatus.Clear();
+            textStatus.AppendText("Результат создания объекта: " + sc.IsOK.ToString()); 
+
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtRegexp.Text = "";
+                cmbCompare.Text = "";
+                cmbAction.Text = "";
+                sp = User.SearchPattern.OpenId(CacheConnect, txtID.Text);
+                //Заполнение полей со свойствами
+                txtRegexp.Text = sp.regexp.ToString();
+                cmbCompare.Text = sp.compare.ToString();
+                cmbAction.Text = sp.action.ToString();
+                //Вызов методов
+                textStatus.Clear();
+                textStatus.AppendText("ID=" + sp.Id().ToString());
+                //textStatus.AppendText("Площадь сектора(с++)(180 градусов)=" + sp.AreaAngleCpp(180).ToString());
+            }
+            catch (Exception eLoad)
+            {
+                txtID.Text = "";
+                textStatus.Clear();
+                textStatus.AppendText("Ошибка: " + eLoad.Message);
+            }
         }
     }
 }

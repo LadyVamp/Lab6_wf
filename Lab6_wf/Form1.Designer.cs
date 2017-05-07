@@ -35,6 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbAction = new System.Windows.Forms.ComboBox();
             this.cmbCompare = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.textStatus = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btnCreate
@@ -103,11 +109,69 @@
             this.cmbCompare.Size = new System.Drawing.Size(121, 21);
             this.cmbCompare.TabIndex = 8;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(210, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(24, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "ID=";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(240, 26);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 9;
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(213, 58);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(139, 23);
+            this.btnOpen.TabIndex = 11;
+            this.btnOpen.Text = "Открытие объекта";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(213, 86);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(139, 23);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Сохранение объекта";
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(213, 115);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(139, 23);
+            this.btnDel.TabIndex = 13;
+            this.btnDel.Text = "Удаление объекта";
+            this.btnDel.UseVisualStyleBackColor = true;
+            // 
+            // textStatus
+            // 
+            this.textStatus.Location = new System.Drawing.Point(28, 181);
+            this.textStatus.Name = "textStatus";
+            this.textStatus.Size = new System.Drawing.Size(324, 111);
+            this.textStatus.TabIndex = 15;
+            this.textStatus.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(252, 191);
+            this.ClientSize = new System.Drawing.Size(372, 315);
+            this.Controls.Add(this.textStatus);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnOpen);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.cmbCompare);
             this.Controls.Add(this.cmbAction);
             this.Controls.Add(this.label3);
@@ -131,6 +195,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbAction;
         private System.Windows.Forms.ComboBox cmbCompare;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.RichTextBox textStatus;
     }
 }
 
