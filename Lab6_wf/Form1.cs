@@ -17,6 +17,7 @@ namespace Lab6_wf
     {
         public CacheConnection CacheConnect;
         public User.SearchPattern sp;
+        public User.File f;
         
         public Form1()
         {
@@ -69,7 +70,35 @@ namespace Lab6_wf
                 //Вызов методов
                 textStatus.Clear();
                 textStatus.AppendText("ID=" + sp.Id().ToString());
-                //textStatus.AppendText("Площадь сектора(с++)(180 градусов)=" + sp.AreaAngleCpp(180).ToString());
+            }
+            catch (Exception eLoad)
+            {
+                txtID.Text = "";
+                textStatus.Clear();
+                textStatus.AppendText("Ошибка: " + eLoad.Message);
+            }
+        }
+
+        private void btnOpenFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtFileName.Text = "";
+                txtKeywords.Text = "";
+                txtSize.Text = "";
+                cmbFormat.Text = "";
+                txtContent.Text = "";
+                f = User.File.OpenId(CacheConnect, txtFileID.Text);
+
+                txtFileName.Text = f.name.ToString();
+                txtKeywords.Text = f.keywords.ToString();
+                txtSize.Text = f.size.ToString();
+                cmbFormat.Text = f.format.ToString();
+                txtContent.Text = f.content.ToString();
+                //Вызов методов
+                textStatus2.Clear();
+                textStatus2.AppendText("ID=" + f.Id().ToString());
+                textStatus2.AppendText(" Новый размер файла=" + f.calcSize().ToString());
             }
             catch (Exception eLoad)
             {
