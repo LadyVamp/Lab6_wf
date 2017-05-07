@@ -1,0 +1,9 @@
+c:\users\nadya\documents\visual studio 2012\Projects\Lab6_wf\Lab6_wf\bin\Debug\Lab6_wf.exe.config
+C:\Users\Nadya\Documents\Visual Studio 2012\Projects\Lab6_wf\Lab6_wf\bin\Debug\Lab6_wf.exe
+C:\Users\Nadya\Documents\Visual Studio 2012\Projects\Lab6_wf\Lab6_wf\bin\Debug\Lab6_wf.pdb
+C:\Users\Nadya\Documents\Visual Studio 2012\Projects\Lab6_wf\Lab6_wf\obj\Debug\Lab6_wf.csprojResolveAssemblyReference.cache
+C:\Users\Nadya\Documents\Visual Studio 2012\Projects\Lab6_wf\Lab6_wf\obj\Debug\Lab6_wf.Form1.resources
+C:\Users\Nadya\Documents\Visual Studio 2012\Projects\Lab6_wf\Lab6_wf\obj\Debug\Lab6_wf.Properties.Resources.resources
+C:\Users\Nadya\Documents\Visual Studio 2012\Projects\Lab6_wf\Lab6_wf\obj\Debug\Lab6_wf.csproj.GenerateResource.Cache
+C:\Users\Nadya\Documents\Visual Studio 2012\Projects\Lab6_wf\Lab6_wf\obj\Debug\Lab6_wf.exe
+C:\Users\Nadya\Documents\Visual Studio 2012\Projects\Lab6_wf\Lab6_wf\obj\Debug\Lab6_wf.pdb
