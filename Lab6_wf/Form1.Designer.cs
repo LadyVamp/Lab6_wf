@@ -161,6 +161,7 @@
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Сохранение объекта";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDel
             // 
@@ -170,6 +171,7 @@
             this.btnDel.TabIndex = 13;
             this.btnDel.Text = "Удаление объекта";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // textStatus
             // 

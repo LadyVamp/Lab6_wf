@@ -79,6 +79,41 @@ namespace Lab6_wf
             }
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            sp = User.SearchPattern.OpenId(CacheConnect, txtID.Text);
+            sp.regexp = txtRegexp.Text;
+            sp.compare = cmbCompare.Text;
+            sp.action = cmbAction.Text;
+            CacheStatus sc = sp.Save();
+            textStatus.Clear();
+            textStatus.AppendText("Результат изменения объекта: " + sc.IsOK.ToString());  
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtRegexp.Text = "";
+                cmbCompare.Text = "";
+                cmbAction.Text = "";
+
+                CacheStatus sc = User.SearchPattern.DeleteId(CacheConnect, sp.Id());
+
+                //Вывод сообщения
+                textStatus.Clear();
+                textStatus.AppendText("Результат удаления объекта: " + sc.IsOK.ToString());
+            }
+            catch (Exception eLoad)
+            {
+                txtID.Text = "";
+                textStatus.Clear();
+                textStatus.AppendText("Ошибка: " + eLoad.Message);
+            }
+
+
+        }
+
         private void btnOpenFile_Click(object sender, EventArgs e)
         {
             try
@@ -97,8 +132,9 @@ namespace Lab6_wf
                 txtContent.Text = f.content.ToString();
                 //Вызов методов
                 textStatus2.Clear();
-                textStatus2.AppendText("ID=" + f.Id().ToString());
-                textStatus2.AppendText(" Новый размер файла=" + f.calcSize().ToString());
+                textStatus2.AppendText("ID=" + f.Id().ToString() + Environment.NewLine);
+                textStatus2.AppendText("calcSize() результат: =" + f.calcSize().ToString() + Environment.NewLine);
+                textStatus2.AppendText("calcSize2(5) результат: =" + f.calcSize2(5).ToString());
             }
             catch (Exception eLoad)
             {
@@ -107,5 +143,9 @@ namespace Lab6_wf
                 textStatus.AppendText("Ошибка: " + eLoad.Message);
             }
         }
+
+
+
+
     }
 }

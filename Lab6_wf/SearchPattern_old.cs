@@ -506,7 +506,7 @@ namespace User {
         /// <summary>Meta information checksum</summary>
         public const long ClassCheckSum = 20841;
         
-        private static System.Collections.Generic.Dictionary<string, int> CheckSumMethodDict = new System.Collections.Generic.Dictionary<string, int>(30);
+        private static System.Collections.Generic.Dictionary<string, int> CheckSumMethodDict = new System.Collections.Generic.Dictionary<string, int>(29);
         
         private static System.Collections.Generic.Dictionary<string, int> CheckSumQueryDict = new System.Collections.Generic.Dictionary<string, int>(1);
         
@@ -528,7 +528,6 @@ namespace User {
             User.File.CheckSumMethodDict.Add("IDKEYExists", 13237);
             User.File.CheckSumMethodDict.Add("IDKEYOpen", 52334);
             User.File.CheckSumMethodDict.Add("calcSize", 63506);
-            User.File.CheckSumMethodDict.Add("calcSize2", 51628);
             ;
         }
         
@@ -906,31 +905,6 @@ namespace User {
                 try {
                     mtdSignature.SetReturnType(this.Connection, InterSystems.Data.CacheTypes.ClientTypeId.tDouble);
                     this.RunMethodS("calcSize", mtdSignature);
-                    return ((InterSystems.Data.CacheTypes.CacheDoubleReturnValue)(mtdSignature.ReturnValue)).Value;
-                }
-                finally {
-                    mtdSignature.Clear();
-                    this.Connection.PostProcessing();
-                }
-            }
-            finally {
-                System.Threading.Monitor.Exit(this.Connection);
-            }
-        }
-        
-        /// <summary>
-        /// Projection of method calcSize2
-        /// </summary>
-        public virtual System.Nullable<double> calcSize2(float dopSize) {
-            try {
-                System.Threading.Monitor.Enter(this.Connection);
-                this.AssertIsConnected();
-                this.Connection.GeneratedAssembly = System.Reflection.Assembly.GetExecutingAssembly();
-                InterSystems.Data.CacheTypes.CacheMethodSignature mtdSignature = this.Connection.GetMtdSignature();
-                try {
-                    mtdSignature.SetReturnType(this.Connection, InterSystems.Data.CacheTypes.ClientTypeId.tDouble);
-                    mtdSignature.Add(dopSize, false);
-                    this.RunMethodS("calcSize2", mtdSignature);
                     return ((InterSystems.Data.CacheTypes.CacheDoubleReturnValue)(mtdSignature.ReturnValue)).Value;
                 }
                 finally {
