@@ -52,7 +52,6 @@ namespace Lab6_wf
             MessageBox.Show("Объект " + sp.regexp + " успешно создан!");
             textStatus.Clear();
             textStatus.AppendText("Результат создания объекта: " + sc.IsOK.ToString()); 
-
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -97,9 +96,7 @@ namespace Lab6_wf
                 txtRegexp.Text = "";
                 cmbCompare.Text = "";
                 cmbAction.Text = "";
-
                 CacheStatus sc = User.SearchPattern.DeleteId(CacheConnect, sp.Id());
-
                 //Вывод сообщения
                 textStatus.Clear();
                 textStatus.AppendText("Результат удаления объекта: " + sc.IsOK.ToString());
@@ -110,8 +107,6 @@ namespace Lab6_wf
                 textStatus.Clear();
                 textStatus.AppendText("Ошибка: " + eLoad.Message);
             }
-
-
         }
 
         private void btnOpenFile_Click(object sender, EventArgs e)
@@ -143,9 +138,5 @@ namespace Lab6_wf
                 textStatus.AppendText("Ошибка: " + eLoad.Message);
             }
         }
-
-
-
-
     }
 }
